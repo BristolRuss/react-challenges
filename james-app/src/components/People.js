@@ -1,10 +1,9 @@
 import React from 'react';
 
-const People = () => {
-    let names = ["James", "Rebecca", "Amanda", "John", "Brenda", "Sue", "Tony"]
-    return (
+const People = ({arrayOfNames}) => {
+    return !arrayOfNames ? <p>Nothing to see here</p> : (
     <ul>
-    {names.map((value, index) => (
+    {arrayOfNames.map((value, index) => (
         <li key={index}>{value}</li>
     ))}
     </ul>
