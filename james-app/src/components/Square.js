@@ -1,13 +1,17 @@
 import React from 'react';
 
-const properties = {
-    background: "red", 
-    width: "200px",
-    height: "200px"
-};
-
-const Square = () => (
-    <div style = {properties}></div>
+const Square = ({colour, height, width}) => (
+    <div style = {{
+        background: colour, 
+        width: width,
+        height: height
+    }}></div>
 );
+
+Square.defaultProps = {
+    colour: "blue",
+    width: "150px",
+    height: "150px"
+}
 
 export default Square;
