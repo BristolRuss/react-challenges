@@ -9,7 +9,7 @@ const Stuff = () => (
     <Header text="Things with cats" />
     <Paragraph message="Cats are wonderful"/>
     <Square colour="purple" height="300px" width= "400px" />
-    <People arrayOfNames = {["James", "Rebecca", "Amanda", "John", "Brenda", "Tony", "Sue"]}/>
+    <People names = {["James", "Rebecca", "Amanda", "John", "Brenda", "Tony", "Sue"]}/>
     
     
 </>
