@@ -5,6 +5,7 @@ import Square from './Square';
 import People from './People';
 import Clicked from './Clicked';
 import ToggleText from './ToggleText';
+import Counter from './Counter';
 
 const Stuff = ({square}) => (
 <>
@@ -14,6 +15,7 @@ const Stuff = ({square}) => (
     {square === true ? (<Square colour="red" height="300px" width="400px" />) : null }
     <People names = {["James", "Rebecca", "Amanda", "John", "Brenda", "Tony", "Sue"]}/>
     <ToggleText initial = "Hello" alternative = "World"/>
+    <Counter initial = {50} max = {100}/>
     <Clicked />
 
 </>
