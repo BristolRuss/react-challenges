@@ -4,28 +4,29 @@ class Square extends Component {
     constructor(){
         super();
         this.state = {
-            clicked: "green",
+            colour: "green",
+            height: "150px",
+            width: "150px",
             counter: 0,
         };
         this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick(){
-        let {colour} = this.props;
         let current = this.state.counter;
-        let odd = current %2;
         this.setState({
             counter: current + 1,
-            clicked: odd ? "green" : colour
         })
     }
 
     render() {
+        let state = this.state;
+        let props = this.props;
         return (
             <div onClick={this.handleClick} style = {{
-                background: this.state.clicked, 
-                width: "150px",
-                height: "150px"
+                background: state.counter % 2 === 0 ? state.colour : props.colour, 
+                width: state.counter % 2 === 0 ? state.width : props.width,
+                height: state.counter % 2 === 0 ? state.height : props.height,
             }}></div>
         )
     }
