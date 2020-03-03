@@ -3,6 +3,7 @@ import Header from './Header';
 import Paragraph from './Paragraph';
 import Square from './Square';
 import People from './People';
+import Clicked from './Clicked';
 
 const Stuff = ({square}) => (
 <>
@@ -11,6 +12,7 @@ const Stuff = ({square}) => (
     </Header>
     {square === true ? (<Square colour="purple" height="300px" width= "400px" />) : null }
     <People names = {["James", "Rebecca", "Amanda", "John", "Brenda", "Tony", "Sue"]}/>
+    <Clicked />
 
 </>
 );
