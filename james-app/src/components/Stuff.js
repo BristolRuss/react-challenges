@@ -6,8 +6,9 @@ import People from './People';
 
 const Stuff = ({square}) => (
 <>
-    <Header text="Things with cats" />
-    <Paragraph message="Cats are wonderful"/>
+    <Header text="Things with cats">    
+        <Paragraph message="Cats are wonderful"/>
+    </Header>
     {square === true ? (<Square colour="purple" height="300px" width= "400px" />) : null }
     <People names = {["James", "Rebecca", "Amanda", "John", "Brenda", "Tony", "Sue"]}/>
 

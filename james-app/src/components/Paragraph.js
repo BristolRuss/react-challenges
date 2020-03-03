@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Paragraph = ({message}) => (
-
-<p>{message}</p>
-
-);
+class Paragraph extends Component  {
+    render() {
+        let { message } = this.props;
+        return (
+            <p>{message}</p>
+        );
+    }
+}
 
 Paragraph.defaultProps = {
     message: "Hello, world!"
