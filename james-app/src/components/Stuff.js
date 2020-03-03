@@ -7,6 +7,7 @@ import Clicked from './Clicked';
 import ToggleText from './ToggleText';
 import Counter from './Counter';
 import StepCounter from './StepCounter';
+import CatchMeIfYouCan from './CatchMeIfYouCan';
 
 const Stuff = ({square}) => (
 <>
@@ -14,11 +15,12 @@ const Stuff = ({square}) => (
         <Paragraph message="Cats are wonderful"/>
     </Header>
     {square === true ? (<Square colour="red" height="300px" width="400px" />) : null }
-    <People names = {["James", "Rebecca", "Amanda", "John", "Brenda", "Tony", "Sue"]}/>
+    {/* <People names = {["James", "Rebecca", "Amanda", "John", "Brenda", "Tony", "Sue"]}/>
     <ToggleText initial = "Hello" alternative = "World"/>
     <Counter initial = {50} max = {100}/>
     <StepCounter max={ 100 } step={ 5 } />
-    <Clicked />
+    <Clicked /> */}
+    <CatchMeIfYouCan jump={ 100 }/>
 
 </>
 );
