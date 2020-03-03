@@ -9,7 +9,6 @@ class Clicked extends Component {
         this.handleClick = this.handleClick.bind(this);
     }
     handleClick(){
-        let current = this.state.clicked;
         this.setState({clicked: "Clicked"})
     }
 

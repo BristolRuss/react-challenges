@@ -10,7 +10,7 @@ const Stuff = ({square}) => (
     <Header text="Things with cats">    
         <Paragraph message="Cats are wonderful"/>
     </Header>
-    {square === true ? (<Square colour="purple" height="300px" width= "400px" />) : null }
+    {square === true ? (<Square colour="red" />) : null }
     <People names = {["James", "Rebecca", "Amanda", "John", "Brenda", "Tony", "Sue"]}/>
     <Clicked />
 
