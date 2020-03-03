@@ -6,6 +6,7 @@ import People from './People';
 import Clicked from './Clicked';
 import ToggleText from './ToggleText';
 import Counter from './Counter';
+import StepCounter from './StepCounter';
 
 const Stuff = ({square}) => (
 <>
@@ -16,6 +17,7 @@ const Stuff = ({square}) => (
     <People names = {["James", "Rebecca", "Amanda", "John", "Brenda", "Tony", "Sue"]}/>
     <ToggleText initial = "Hello" alternative = "World"/>
     <Counter initial = {50} max = {100}/>
+    <StepCounter max={ 100 } step={ 5 } />
     <Clicked />
 
 </>
