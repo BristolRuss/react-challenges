@@ -16,6 +16,7 @@ import Length from './Length';
 import PasswordStrength from './PasswordStrength';
 import TempConverter from './TempConverter';
 import List from './List';
+import Adder from './Adder';
 
 const Stuff = ({square}) => (
 <>
@@ -35,8 +36,9 @@ const Stuff = ({square}) => (
     <LameGame aim={ 10 }/>
     <Length />
     <PasswordStrength />
-    <TempConverter /> */}
-    <List />
+    <TempConverter />
+    <List /> */}
+    <Adder />
 
 </>
 );
