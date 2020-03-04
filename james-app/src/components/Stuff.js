@@ -14,6 +14,7 @@ import Die from './Die';
 import LameGame from './LameGame';
 import Length from './Length';
 import PasswordStrength from './PasswordStrength';
+import TempConverter from './TempConverter';
 
 const Stuff = ({square}) => (
 <>
@@ -31,8 +32,9 @@ const Stuff = ({square}) => (
     <Colours colours = {["#C14412","#EBB31A","#8F5318","#009EAD","#395967",]}/>
     <Die sides={ 6 } />
     <LameGame aim={ 10 }/>
-    <Length /> */}
-    <PasswordStrength />
+    <Length />
+    <PasswordStrength /> */}
+    <TempConverter />
 
 </>
 );
