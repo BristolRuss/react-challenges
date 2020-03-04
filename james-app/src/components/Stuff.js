@@ -9,6 +9,7 @@ import Counter from './Counter';
 import StepCounter from './StepCounter';
 import CatchMeIfYouCan from './CatchMeIfYouCan';
 import RollCall from './RollCall';
+import Colours from './Colours';
 
 const Stuff = ({square}) => (
 <>
@@ -22,7 +23,14 @@ const Stuff = ({square}) => (
     <StepCounter max={ 100 } step={ 5 } />
     <Clicked />
     <CatchMeIfYouCan jump={ 100 }/> */}
-    <RollCall names = {["James", "Rebecca", "Amanda", "John", "Brenda", "Tony", "Sue"]}/>
+    {/* <RollCall names = {["James", "Rebecca", "Amanda", "John", "Brenda", "Tony", "Sue"]}/> */}
+    <Colours colours = {[
+                "#C14412",
+                "#EBB31A",
+                "#8F5318",
+                "#009EAD",
+                "#395967",
+            ]}/>
 
 </>
 );
