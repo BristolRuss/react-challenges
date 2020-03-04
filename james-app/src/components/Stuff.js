@@ -12,6 +12,7 @@ import RollCall from './RollCall';
 import Colours from './Colours';
 import Die from './Die';
 import LameGame from './LameGame';
+import Length from './Length';
 
 const Stuff = ({square}) => (
 <>
@@ -26,9 +27,10 @@ const Stuff = ({square}) => (
     <Clicked />
     <CatchMeIfYouCan jump={ 100 }/>
     <RollCall names = {["James", "Rebecca", "Amanda", "John", "Brenda", "Tony", "Sue"]}/>
-    <Colours colours = {["#C14412","#EBB31A","#8F5318","#009EAD","#395967",]}/> */}
-    {/* <Die sides={ 6 } /> */}
-    <LameGame aim={ 10 }/>
+    <Colours colours = {["#C14412","#EBB31A","#8F5318","#009EAD","#395967",]}/>
+    <Die sides={ 6 } />
+    <LameGame aim={ 10 }/> */}
+    <Length />
 
 </>
 );
