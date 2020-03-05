@@ -5,7 +5,8 @@ class Header extends Component  {
         let { text, children} = this.props;
         return (
             <header>
-                <h1>{text}</h1>
+                <h1>Welcome to my little App</h1>
+                <h3>{text}</h3>
                 {children}
             </header>
         );

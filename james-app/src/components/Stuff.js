@@ -25,13 +25,16 @@ const Stuff = () => (
         <Router>
             <Switch>
                 <Route exact path = "/">
-                    <Header text="App">    
-                        <Paragraph message="Cats are wonderful"/>
+                    <Header text="Please select a component using the dropdown">    
+                        <Paragraph message="P.s Cats are wonderful"/>
                     </Header>
                 </Route>
                 <Route exact path = "/square">
                     <Square colour="red" height="300px" width="400px" />
                 </Route>
+                <Route path = "/square/:colour" render = { ({match}) => (
+                    <Square colour = {match.params.colour} />
+                ) } />
                 <Route exact path = "/people">
                     <People names = {["James", "Rebecca", "Amanda", "John", "Brenda", "Tony", "Sue"]}/>
                 </Route>
@@ -44,6 +47,9 @@ const Stuff = () => (
                 <Route exact path = "/step-counter">
                     <StepCounter max={ 100 } step={ 5 } />
                 </Route>
+                <Route path = "/steps/:max/:step" render = { ({match}) => (
+                    <StepCounter max = {match.params.max} step = {match.params.step} />
+                ) } />
                 <Route exact path = "/clicked" component = {Clicked}/>
                 <Route exact path = "/catch-me">
                     <CatchMeIfYouCan jump={ 100 }/>

@@ -13,6 +13,13 @@
   }
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .disappointed {
+    z-index: 0;
+    animation: App-logo-spin infinite 15s linear;
+  }
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

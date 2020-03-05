@@ -25,8 +25,8 @@ class Square extends Component {
         return (
             <div onClick={this.handleClick} style = {{
                 background: state.counter % 2 === 0 ? state.colour : props.colour, 
-                width: state.counter % 2 === 0 ? state.width : props.width,
-                height: state.counter % 2 === 0 ? state.height : props.height,
+                width: "150px",
+                height: "150px",
             }}></div>
         )
     }
