@@ -5,7 +5,7 @@ class List extends Component {
         super();
         this.state = {
             input: "",
-            array: [],
+            items: [],
         };
         this.handleInput = this.handleInput.bind(this);
         this.handleClick = this.handleClick.bind(this);
@@ -18,25 +18,30 @@ class List extends Component {
     }
 
     handleClick(){
-        let {input, array} = this.state;
+        let {input, items} = this.state;
+        let newArray = [...items, input]
         this.setState({
-            array: [...array, input]
+            items: newArray,
+            input: ""
         })
     }
 
+    form(e){
+        e.preventDefault();
+    }
+
     render() {
-        let input = this.state.input;
-        let items = this.state.array;
+        let {input, items} = this.state;
 
         return (
-            <div>
+            <form onSubmit={this.form}>
                 <label style={{display: "block"}}>Add some items</label>
                 <input value = {input} onChange={this.handleInput}></input>
                 <button onClick={this.handleClick}>Add</button>
                 <ul>
                     {items.map((item, index) => <li key={index}>{item}</li>)}
                 </ul>
-            </div>
+            </form >
         )
     }
 }

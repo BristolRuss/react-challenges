@@ -21,7 +21,7 @@ class Counter extends Component {
     handleMinus(){
         let current = this.state.counter;
         this.setState({
-            counter: current > (0) ? current - 1 : current,
+            counter: current > 0 ? current - 1 : current,
         })
     }
 

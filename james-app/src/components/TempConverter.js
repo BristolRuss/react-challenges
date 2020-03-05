@@ -28,20 +28,15 @@ class TempConverter extends Component {
     }
 
     render() {
-        let celcius = this.state.celcius;
-        let fahrenheit = this.state.fahrenheit;
+        let {celcius, fahrenheit} = this.state;
 
         return (
-            <>
-                <div>
-                    <label for="celcius" style = {{display: "block"}}>Celcius</label>
-                    <input id="celcius" value = {celcius} onChange={this.handleCelcius} type = "number"></input>
-                </div>
-                <div>
-                    <label for="fahrenheit" style = {{display: "block"}}>Fahrenheit</label>
-                    <input id="fahrenheit" value = {fahrenheit} onChange={this.handleFahrenheit} type = "number"></input>
-                </div>
-            </>
+            <form>
+                <label for="celcius" style = {{display: "block"}}>Celcius</label>
+                <input id="celcius" value = {celcius} onChange={this.handleCelcius} type = "number"></input>
+                <label for="fahrenheit" style = {{display: "block"}}>Fahrenheit</label>
+                <input id="fahrenheit" value = {fahrenheit} onChange={this.handleFahrenheit} type = "number"></input>
+            </form>
         )
     }
 }

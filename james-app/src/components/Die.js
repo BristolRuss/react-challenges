@@ -21,13 +21,16 @@ class Die extends Component {
         return (
             <div onClick={this.handleClick} style = {{
                 background: "white",
-                width: "200px",
-                height: "200px"
+                width: "15rem",
+                height: "15rem",
+                display: "space-between",
+                justifyItems: "center"
             }}>
                 <h1 style = {{
                     color: "black",
-                    fontSize: "4.5rem",
-                    textAlign: "center"
+                    justifyContent: "center",
+                    textAlign: "center",
+                    fontSize: "11rem"
                 }}>
                     {roll}
                 </h1>

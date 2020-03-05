@@ -5,7 +5,7 @@ class Adder extends Component {
         super();
         this.state = {
             input: "",
-            array: [],
+            items: [],
         };
         this.handleInput = this.handleInput.bind(this);
         this.handleClick = this.handleClick.bind(this);
@@ -18,20 +18,24 @@ class Adder extends Component {
     }
 
     handleClick(){
-        let {input, array} = this.state;
+        let {input, items} = this.state;
+        let newArray = [...items, input]
         this.setState({
-            array: [...array, input],
+            items: newArray,
             input: ""
         })
     }
 
+    form(e){
+        e.preventDefault();
+    }
+
     render() {
-        let input = this.state.input;
-        let items = this.state.array;
+        let {input, items} = this.state;
         let total = items.reduce((runningTotal, item) => runningTotal += +item, 0);
 
         return (
-            <div>
+            <form onSubmit={this.form}>
                 <label style={{display: "block"}}>Add some numbers</label>
                 <input value = {input} onChange={this.handleInput} type="number"></input>
                 <button onClick={this.handleClick}>Add</button>
@@ -39,7 +43,7 @@ class Adder extends Component {
                     {items.map((item, index) => <li key={index}>{item}</li>)}
                 </ul>
                 <h1>The total is {total}</h1>
-            </div>
+            </form>
         )
     }
 }

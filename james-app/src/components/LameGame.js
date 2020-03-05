@@ -44,7 +44,7 @@ class LameGame extends Component {
         let answer = aim - difference;
         return (
             <div>
-                {timer === 1 ? <h1>The target is {aim} seconds</h1> : null}
+                {timer === 1 && clicked ===0 ? <h1>The target is {aim} seconds</h1> : null}
                 {clicked === 1 ? answer >= 0 ? <h1>You were {answer.toFixed(2)} seconds under!</h1> 
                 : <h1>You were {Math.abs(answer.toFixed(2))} seconds over!</h1> : null}
                 {timer === 0 ? <button onClick={this.handleStart}>Start</button> : null}

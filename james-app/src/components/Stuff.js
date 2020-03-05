@@ -1,4 +1,5 @@
 import React from 'react';
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Header from './Header';
 import Paragraph from './Paragraph';
 import Square from './Square';
@@ -17,34 +18,57 @@ import PasswordStrength from './PasswordStrength';
 import TempConverter from './TempConverter';
 import List from './List';
 import Adder from './Adder';
+import Footer from './Footer';
+import FourOhFour from './FourOhFour';
 
-const Stuff = ({square}) => (
-<>
-    {/* <Header text="Things with cats">    
-        <Paragraph message="Cats are wonderful"/>
-    </Header>
-    {square === true ? (<Square colour="red" height="300px" width="400px" />) : null }
-    <People names = {["James", "Rebecca", "Amanda", "John", "Brenda", "Tony", "Sue"]}/>
-    <ToggleText initial = "Hello" alternative = "World"/>
-    <Counter initial = {50} max = {100}/>
-    <StepCounter max={ 100 } step={ 5 } />
-    <Clicked />
-    <CatchMeIfYouCan jump={ 100 }/>
-    <RollCall names = {["James", "Rebecca", "Amanda", "John", "Brenda", "Tony", "Sue"]}/>
-    <Colours colours = {["#C14412","#EBB31A","#8F5318","#009EAD","#395967",]}/>
-    <Die sides={ 6 } />
-    <LameGame aim={ 10 }/>
-    <Length />
-    <PasswordStrength />
-    <TempConverter />
-    <List /> */}
-    <Adder />
-
-</>
+const Stuff = () => (
+        <Router>
+            <Switch>
+                <Route exact path = "/">
+                    <Header text="App">    
+                        <Paragraph message="Cats are wonderful"/>
+                    </Header>
+                </Route>
+                <Route exact path = "/square">
+                    <Square colour="red" height="300px" width="400px" />
+                </Route>
+                <Route exact path = "/people">
+                    <People names = {["James", "Rebecca", "Amanda", "John", "Brenda", "Tony", "Sue"]}/>
+                </Route>
+                <Route exact path = "/toggle-text">
+                    <ToggleText initial = "Hello" alternative = "World"/>
+                </Route>
+                <Route exact path = "/counter">
+                    <Counter initial = {50} max = {100}/>
+                </Route>
+                <Route exact path = "/step-counter">
+                    <StepCounter max={ 100 } step={ 5 } />
+                </Route>
+                <Route exact path = "/clicked" component = {Clicked}/>
+                <Route exact path = "/catch-me">
+                    <CatchMeIfYouCan jump={ 100 }/>
+                </Route>
+                <Route exact path = "/rollcall">
+                    <RollCall names = {["James", "Rebecca", "Amanda", "John", "Brenda", "Tony", "Sue"]}/>
+                </Route>
+                <Route exact path="/colours">
+                    <Colours colours = {["#C14412","#EBB31A","#8F5318","#009EAD","#395967",]}/>
+                </Route>
+                <Route exact path="/die">
+                    <Die sides={ 6 } />
+                </Route>
+                <Route exact path="/lame-game">
+                    <LameGame aim={ 10 }/>
+                </Route>
+                <Route exact path="/length" component = {Length}/>
+                <Route exact path="/password" component = {PasswordStrength} />
+                <Route exact path="/temp-converter" component={TempConverter} />
+                <Route exact path="/list" component = {List}/>
+                <Route exact path="/adder" component = {Adder}/>
+                <Route component = {FourOhFour} />
+            </Switch>
+            <Route component = {Footer} />
+        </Router>
 );
-
-Stuff.defaultProps = {
-    square: true
-}
 
 export default Stuff;
