@@ -30,6 +30,11 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.wrapper {
+  width: 80vw;
+  display: block;
+  padding: 10vh 15vw 0 15vw;
+}
 
 .App-link {
   color: #61dafb;

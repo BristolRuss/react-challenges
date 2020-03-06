@@ -22,7 +22,8 @@ class Footer extends Component{
                 ["/password", "Password Checker"],
                 ["/temp-converter", "Temperature Converter"],
                 ["/list", "List"],
-                ["/adder", "Adder"]
+                ["/adder", "Adder"],
+                ["/progress", "Progress"]
             ],
         };
     }

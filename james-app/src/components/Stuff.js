@@ -20,6 +20,7 @@ import List from './List';
 import Adder from './Adder';
 import Footer from './Footer';
 import FourOhFour from './FourOhFour';
+import Progress from './Progress';
 
 const Stuff = () => (
         <Router>
@@ -71,7 +72,9 @@ const Stuff = () => (
                 <Route exact path="/temp-converter" component={TempConverter} />
                 <Route exact path="/list" component = {List}/>
                 <Route exact path="/adder" component = {Adder}/>
+                <Route exact path="/progress" component = {Progress} />
                 <Route component = {FourOhFour} />
+                
             </Switch>
             <Route component = {Footer} />
         </Router>
