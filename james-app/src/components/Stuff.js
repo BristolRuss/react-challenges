@@ -21,6 +21,7 @@ import Adder from './Adder';
 import Footer from './Footer';
 import FourOhFour from './FourOhFour';
 import Progress from './Progress';
+import CatchMe2 from './CatchMe2';
 
 const Stuff = () => (
         <Router>
@@ -73,6 +74,9 @@ const Stuff = () => (
                 <Route exact path="/list" component = {List}/>
                 <Route exact path="/adder" component = {Adder}/>
                 <Route exact path="/progress" component = {Progress} />
+                <Route exact path="/catch-me-2">
+                    <CatchMe2 jump={ 100 }/>
+                </Route>
                 <Route component = {FourOhFour} />
                 
             </Switch>

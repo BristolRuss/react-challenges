@@ -23,7 +23,8 @@ class Footer extends Component{
                 ["/temp-converter", "Temperature Converter"],
                 ["/list", "List"],
                 ["/adder", "Adder"],
-                ["/progress", "Progress"]
+                ["/progress", "Progress"],
+                ["/catch-me-2", "Catch Me If You Can 2"]
             ],
         };
     }
