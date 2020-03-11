@@ -1,6 +1,5 @@
 import React from 'react';
-// import {BrowserRouter as Router, Route} from "react-router-dom";
-// import logo from './logo.svg';
+// import {HashRouter as Router, Route} from "react-router-dom";
 import './App.css';
 import Stuff from './components/Stuff';
 
@@ -8,8 +7,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <Stuff square = {true} />
+        <Stuff/>
       </header>
     </div>
   );

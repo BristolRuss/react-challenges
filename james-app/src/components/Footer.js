@@ -24,7 +24,19 @@ class Footer extends Component{
                 ["/list", "List"],
                 ["/adder", "Adder"],
                 ["/progress", "Progress"],
-                ["/catch-me-2", "Catch Me If You Can 2"]
+                ["/catch-me-2", "Catch Me If You Can 2"],
+                ["/articles", "Articles"],
+                ["/clicked-hook", "Clicked Hook"],
+                ["/square-hook", "Square Hook"],
+                ["/toggle-hook", "Toggle Hook"],
+                ["/counter-hook", "Counter Hook"],
+                ["/step-hook", "StepCounter Hook"],
+                ["/catch-me-hook", "Catch Me If You Can Hook"],
+                ["/roll-call-hook", "RollCall Hook"],
+                ["/colours-hook", "Colours Hook"],
+                ["/dice-hook", "Dice Hook"],
+                ["/lame-game-hook", "Lame-Game Hook"],
+                ["/counter-hold", "Counter Hold"]
             ],
         };
     }
@@ -37,10 +49,10 @@ class Footer extends Component{
             <>
                 <div className="dropdown show">
                     <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">Select</button>
-                    <div className="dropdown-menu">
+                    <ul className="dropdown-menu scrollable-menu" role="menu">
                     {components.map((component, index) => 
-                        <Link className="dropdown-item" to = {component[0]} key={index}>{component[1]}</Link>)}
-                    </div>
+                        <li key={index}><Link className="dropdown-item" to = {component[0]} >{component[1]}</Link></li>)}
+                    </ul>
                 </div>
                 
             </>

@@ -13,6 +13,82 @@
   }
 }
 
+.btn {
+  margin: 5px;
+}
+
+.articlesLi {
+  padding-top: 10px;
+  list-style-type: none;
+  border-bottom: 1px solid darkgray;
+}
+
+.articleLi {
+  padding-top: 10px;
+  list-style-type: none;
+}
+
+.commentsLi {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  padding-top: 10px;
+  list-style-type: none;
+  border-top: 1px solid darkgray;
+}
+
+.addArticle {
+  position: fixed;
+  top: 4rem;
+  right: 4rem;
+}
+
+.dropdown-menu {         
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.dropdown-item {
+  font-size: medium;
+}
+
+label{
+  display: block;
+}
+
+.form {
+  width: 40vw;
+}
+
+.formButton {
+  margin-top: 20px;
+  display: flex;
+  text-align: center;
+}
+
+.comments {
+  background-color: whitesmoke;
+  color: darkgrey;
+  display: flex;
+  display: inline-block;
+  width: 50vw;
+  justify-content: space-evenly;
+}
+
+.articleLink {
+  color: white;
+}
+
+.articleLink:hover {
+  color: darkgrey;
+}
+
+.articleH1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 5vh;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .disappointed {
     z-index: 0;
